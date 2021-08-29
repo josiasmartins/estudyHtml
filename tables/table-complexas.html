@@ -1,0 +1,53 @@
+<!-- 
+    2 lojas
+        Quantos produtos foram produzidos; quantos vendidos
+        e agrupado por nome de produtos
+
+        Atributos
+            rowspan: adiciona mais uma linha
+            colspan: adiciona mais uma coluna
+            colgroup: tag para agrupar as colunas
+            scope: tag usado para acessibilidade
+
+ -->
+<table>
+    <caption>Produzidos vs vendidos</caption>
+
+    <colgroup>
+        <col>
+        <col span="2"style="background-color: green"> <!--Não precisa colocar colspan porque ele já entende que está referindo a tabela; span="2"-->
+        <col span="2" style="background-color: purple">
+    </colgroup>
+
+    <thead>
+        <tr>
+            <th rowspan="2"></th>
+            <th colspan="2" scope="colgroup">Familia Carmo</th>
+            <th colspan="2" scope="colgroup">Familia Caitano</th>
+        </tr>
+
+        <tr>
+            <th scope="col">Produzidos</th>
+            <th scope="col">vendidos</th>
+            <th scope="col">produzidos</th>
+            <th scope="col">vendidos</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr>
+            <th scope="row">vassoura</th>
+            <td>20</td>
+            <td>20</td>
+            <td>50</td>
+            <td>10</td>
+        </tr>
+        <tr>
+            <th scope="row">Baldes</th>
+            <td>10</td>
+            <td>20</td>
+            <td>4</td>
+            <td>90</td>
+        </tr>
+    </tbody>
+</table>
